@@ -1,0 +1,15 @@
+[
+    {
+        "name": "José",
+        "age": 45,
+        "height": 1.76,
+        "country": "Paradeidad"
+    },
+    {
+        "id": "f5fa1885-ae27-4ea0-96b6-678322bb4f8d",
+        "name": "José",
+        "age": 23,
+        "height": 1.78,
+        "country": "Paraguay"
+    }
+]
