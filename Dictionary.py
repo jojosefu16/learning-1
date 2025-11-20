@@ -119,14 +119,7 @@ def show_users():
                         print("Invalid number. Try again.")
                 except ValueError:
                     print("Invalid input. Please enter a number.")
-
-                    for key, value in user.items():
-                        print(f"\n{key.capitalize()}: {value}")
-            else:
-                matched_users[0]
-                for key, value in user.items():
-                    print(f"{key.capitalize()}: {value}")
-                    return  
+                    continue
                       
         elif option=="2":
             return

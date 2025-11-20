@@ -75,3 +75,28 @@ def normalize_text(text):
     text=unicodedata.normalize('NFD', text)
     text=''.join(ch for ch in text if unicodedata.category(ch)!='Mn')
     return text
+
+
+
+def search_list(data, value):
+    if "," in value:
+        value=value.replace(",", ".")
+        
+    result=[]
+
+    for item in data:
+        for campo_val in item.values():
+            if isinstance(campo_val, str):
+                if normalize_text(value) in normalize_text(campo_val):
+                    result.append(item)
+                    break
+            
+            else:
+                
+                try:
+                    if float(value)==float(campo_val):
+                        result.append(item)
+                        break
+                except ValueError:
+                    continue
+    return result
